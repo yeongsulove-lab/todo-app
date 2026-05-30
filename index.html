@@ -955,7 +955,7 @@ function renderSummary() {
       <div class="summary-today-row"><span class="summary-today-key">남은 할 일</span><span class="summary-today-val">${total-done}개</span></div>
       ${firstDone ? `<div class="summary-today-row"><span class="summary-today-key">첫 완료</span><span class="summary-today-val">${firstDone}</span></div><div class="summary-today-row"><span class="summary-today-key">마지막 완료</span><span class="summary-today-val">${lastDone}</span></div>` : ''}
     </div>
-    ${catStats.length > 0 ? `<div class="summary-divider">카테고리별</div>${catStats.map(c => `<div class="cat-stat-row"><span class="cat-stat-dot" style="background:${c.color}"></span><span class="cat-stat-name">${c.label}</span><div class="cat-stat-bar-wrap"><div class="cat-stat-bar-fill" style="width:${c.pct}%;background:${c.color}"></div></div><span class="cat-stat-nums">${c.done}/${c.total}</span></div>`).join('') : ''}
+    ${catStats.length > 0 ? '<div class="summary-divider">카테고리별</div>' + catStats.map(c => '<div class="cat-stat-row"><span class="cat-stat-dot" style="background:' + c.color + '"></span><span class="cat-stat-name">' + c.label + '</span><div class="cat-stat-bar-wrap"><div class="cat-stat-bar-fill" style="width:' + c.pct + '%;background:' + c.color + '"></div></div><span class="cat-stat-nums">' + c.done + '/' + c.total + '</span></div>').join("") : ""}
   `;
 }
 
@@ -1014,3 +1014,4 @@ initListeners();
 </script>
 </body>
 </html>
+
