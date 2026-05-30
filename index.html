@@ -719,7 +719,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const db  = getFirestore(app);
+const db  = getFirestore(app, '(default)');
 
 const TASKS_COL   = collection(db, 'todo_tasks');
 const HISTORY_COL = collection(db, 'todo_history');
